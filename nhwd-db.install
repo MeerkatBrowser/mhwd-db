@@ -1,0 +1,18 @@
+ 
+post_install() {
+    \mkdir -p /var/lib/mhwd/db/usb
+    \mkdir -p /var/lib/mhwd/db/pci/
+    \mkdir -p /var/lib/mhwd/local/usb/
+    \mkdir -p /var/lib/mhwd/local/pci/
+}
+
+post_upgrade() {
+    post_install $1
+}
+
+pre_remove() {
+    \rm -rf /var/lib/mhwd/db/usb
+    \rm -rf /var/lib/mhwd/db/pci/
+    \rm -rf /var/lib/mhwd/local/usb/
+    \rm -rf /var/lib/mhwd/local/pci/
+}
