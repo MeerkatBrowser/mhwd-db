@@ -10,7 +10,8 @@ sha256sums=('SKIP')
 install=$pkgname.install
 
 package() {
-    cd "${srcdir}"
-	make PREFIX=/var DESTDIR=${pkgdir} install
+    install -d ${pkgdir}/var/lib/mhwd/db/pci
+	cp -r ${srcdir}/nhwd-db/pci/ "${pkgdir}/var/lib/mhwd/db/"
 }
+
 
