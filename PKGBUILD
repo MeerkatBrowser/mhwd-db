@@ -1,5 +1,5 @@
 pkgname=nhwd-db
-pkgver=17.11
+pkgver=18.02
 pkgrel=1
 pkgdesc='Namib Hardware Detection Database'
 arch=(any)
